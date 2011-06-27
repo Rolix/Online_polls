@@ -1,0 +1,6 @@
+<form method="post" action="">
+{% for choice in choices %}
+	<li>{{ choice.choice }}: <input name="choice" type="radio" value="{{ choice.id }}"></li>
+{% endfor %}
+<input type="submit"/>
+</form>
