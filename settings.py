@@ -1,6 +1,6 @@
-# Django settings for polls project.
 import os
-PROJECT_ROOT=os.path.realpath(os.path.dirname(__file__))
+PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
+# Django settings for checkoffs project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -14,7 +14,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'polls.db',                      # Or path to database file if using sqlite3.
+        'NAME': 'checks.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -29,7 +29,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'Africa/Accra'
+TIME_ZONE = 'America/Chicago'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -85,7 +85,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'i$!lsum593y@7m6g(oiek!&f37-g*8#*$d_lu75cy&ix)c-=vh'
+SECRET_KEY = '*yq1d@^h^52redmrnmb)!st@+iwtjl!x4qi*o238twkxbjg%@5'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -102,13 +102,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'polls.urls'
+ROOT_URLCONF = 'checkoffs.urls'
 
 TEMPLATE_DIRS = (
-	os.path.join(PROJECT_ROOT, 'templates')
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_ROOT, 'templates')
 )
 
 INSTALLED_APPS = (
@@ -118,9 +115,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'onlinepoll',
-    #Uncomment the next line to enable the admin:
-    'django.contrib.admin',
+    'checks',
+    # Uncomment the next line to enable the admin:
+    # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
