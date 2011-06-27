@@ -1,0 +1,9 @@
+<h2>{{poll.question}}</h2>
+
+<form method="post" action="">
+{% for choice in choices %}
+	<li>{{ choice.choice }}: <input name="choice" type="radio" value="{{ choice.id }}">
+		{% if done %}{{choice.votes}}{%endif%}</li>
+{% endfor %}
+{% if not done %}<input type="submit"/>{% endif %}
+</form>
